@@ -7,7 +7,7 @@ from kamera_ip import IPCAM
 from upload import UploadGoogleDrive
 
 app = Flask(__name__)
-#vs = VideoCamera().start()
+vs = VideoCamera().start()
 #gd = UploadGoogleDrive().start()
 ipc= IPCAM().start()
 
