@@ -77,7 +77,7 @@ class VideoCamera(object):
                 gambar = (str(jam)+'.jpg')
                 bufferSize = 256 *1024
                 password = "ngintipbaik"
-                pyAesCrypt.encryptFile(gambar, str(jam)+".aes", password, bufferSize)
+                pyAesCrypt.encryptFile(str(jam)+'.jpg', str(jam)+".aes", password, bufferSize)
                 fileaes = (str(jam)+".aes")
                 print(fileaes)
                 dataKiriman = [('kamera','kamera satu'),('tanggal',jam),('gambar',fileaes)]
