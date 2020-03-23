@@ -5,7 +5,7 @@ from datetime import datetime
 
 class IPCAM(object):
     def __init__(self):
-        self.url = 'http://192.168.1.16:80/webcapture.jpg?command=snap&channel=1'
+        self.url = 'http://192.168.0.100:80/webcapture.jpg?command=snap&channel=1'
         #self.cam.set
         self.cam = cv2.VideoCapture(self.url)
         (self.grabbed, self.frame) = self.cam.read()
