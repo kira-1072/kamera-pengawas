@@ -1,5 +1,6 @@
 import numpy as np
 import cv2, sys, urllib2, urllib, time
+import pyAesCrypt
 from collections import deque
 from datetime import datetime
 from threading import Thread
@@ -74,8 +75,12 @@ class VideoCamera(object):
                 dimg = self.cam.read()[1]
                 cv2.imwrite(('../pictures/' + str(jam) + '.jpg'), dimg)
                 gambar = (str(jam)+'.jpg')
-                print(gambar)
-                dataKiriman = [('kamera','kamera satu'),('tanggal',jam),('gambar',gambar)]
+                bufferSize = 256 *1024
+                password = "ngintipbaik"
+                pyAesCrypt.encryptFile(gambar, str(jam)+".aes", password, bufferSize)
+                fileaes = (str(jam)+".aes")
+                print(fileaes)
+                dataKiriman = [('kamera','kamera satu'),('tanggal',jam),('gambar',fileaes)]
                 dataKiriman = urllib.urlencode(dataKiriman)
                 path='http://192.168.0.100/kamera-pengawas/python-alfath/penerima.php'
                 req = urllib2.Request(path, dataKiriman)
