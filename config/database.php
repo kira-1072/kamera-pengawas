@@ -1,8 +1,8 @@
 <?php
 //deklarasi parameter koneksi ke database
 $server  = "localhost";
-$username= "root";
-$password= "Smart1996%";
+$username= "rauf";
+$password= "tes123";
 $database= "kamera-pengawas";
 
 //koneksi ke database

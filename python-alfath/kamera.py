@@ -9,7 +9,7 @@ class VideoCamera(object):
         global t0, t1, t2
         self.q = deque(maxlen=20)
 
-        self.cam = cv2.VideoCapture(1)
+        self.cam = cv2.VideoCapture(0)
         self.cam.set(3, 960)
         self.cam.set(4, 720)
 
@@ -77,7 +77,7 @@ class VideoCamera(object):
                 print(gambar)
                 dataKiriman = [('kamera','kamera satu'),('tanggal',jam),('gambar',gambar)]
                 dataKiriman = urllib.urlencode(dataKiriman)
-                path='http://localhost/kamera-pengawas/python-alfath/penerima.php'
+                path='http://192.168.0.100/kamera-pengawas/python-alfath/penerima.php'
                 req = urllib2.Request(path, dataKiriman)
                 page= urllib2.urlopen(req).read()
                 #cv2.imshow(winName, self.frame)

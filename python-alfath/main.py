@@ -29,4 +29,4 @@ def video_feed():
 
 if __name__ == '__main__':
 	logging.basicConfig(format='%(asctime)s %(message)s', filename='kamerapengawas.log', level=logging.INFO)
-	app.run(host='0.0.0.0', port=8081)
+	app.run(host='0.0.0.0', port=5000)
