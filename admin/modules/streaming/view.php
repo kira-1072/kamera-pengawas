@@ -19,7 +19,7 @@
         <div class="box-body">
           <div class="center">
             <h1>Kamera 1</h1>
-            <iframe width="660" height="500" src="http://192.168.0.100:5000/" frameborder="2" allow="autoplay" allowfullscreen></iframe>
+            <iframe width="660" height="500" src="http://192.168.0.101:5000/" frameborder="2" allow="autoplay" allowfullscreen></iframe>
           </div>
 
           <div class="center">
