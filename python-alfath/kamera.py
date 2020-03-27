@@ -1,7 +1,6 @@
 import numpy as np
 import cv2, sys, time
 import urllib.parse
-import urllib.request
 from collections import deque
 from datetime import datetime
 from threading import Thread
@@ -82,7 +81,7 @@ class VideoCamera(object):
                 dataKiriman = urllib.parse.urlencode(dataKiriman)
                 path='http://192.168.0.100/kamera-pengawas/python-alfath/penerima.php'
                 #req = urllib2.Request(path, dataKiriman)
-                page= urllib.request.urlopen(path, dataKiriman).read()
+                page=urlopen(path, dataKiriman).read()
                 #cv2.imshow(winName, self.frame)
                 #cv2.imshow(winName, self.diffImg(t_minus, t, t_plus))
 
