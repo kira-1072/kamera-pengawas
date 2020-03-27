@@ -1,5 +1,5 @@
 import numpy as np
-import cv2, sys, urllib, urllib2, MySQLdb, time
+import cv2, sys, urllib, MySQLdb, time
 from  datetime import datetime
 from googleapiclient.discovery import build
 from httplib2 import Http
