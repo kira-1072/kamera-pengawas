@@ -11,7 +11,7 @@ class VideoCamera(object):
         global t0, t1, t2
         self.q = deque(maxlen=20)
 
-        self.cam = cv2.VideoCapture(0)
+        self.cam = cv2.VideoCapture(1)
         self.cam.set(3, 960)
         self.cam.set(4, 720)
 
